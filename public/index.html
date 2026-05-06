@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SECURE HOME | Система сигнализации</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SECURE<span>HOME</span></h1>
+            <div id="status-badge" class="status-disarmed">СИСТЕМА СНЯТА С ОХРАНЫ</div>
+        </header>
+
+        <main>
+            <!-- Блок управления -->
+            <section class="control-panel card">
+                <h2>УПРАВЛЕНИЕ</h2>
+                <div class="button-group">
+                    <button id="btn-arm" class="btn btn-yellow">ПОСТАВИТЬ НА ОХРАНУ</button>
+                    <button id="btn-disarm" class="btn btn-green">СНЯТЬ С ОХРАНЫ</button>
+                    <button id="btn-test" class="btn btn-red">ТЕСТ ТРЕВОГИ</button>
+                    <button id="btn-reset" class="btn btn-red">СБРОС ТРЕВОГИ</button>
+                </div>
+                <audio id="alarm-sound" src="alarm.mp3" loop></audio>
+            </section>
+
+            <!-- Блок логов -->
+            <section class="events-panel card">
+                <h2>ЖУРНАЛ СОБЫТИЙ</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Время</th>
+                                <th>Событие</th>
+                                <th>Датчик</th>
+                                <th>Сообщение</th>
+                            </tr>
+                        </thead>
+                        <tbody id="events-body">
+                            <!-- Сюда будут добавляться строки из JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Система управления домашней сигнализацией 2026. Выполнил студент группы КС-23-2 Чистяков Андрей</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
