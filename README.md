@@ -1,4 +1,4 @@
-# Web-Lamp
+# home-alarm
 
 Интеллектуальная система управления освещением на базе ESP32, Node.js и Supabase.
 
